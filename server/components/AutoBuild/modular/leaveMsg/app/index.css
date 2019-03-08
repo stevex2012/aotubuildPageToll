@@ -1,0 +1,195 @@
+
+
+#pc-leave-msg .con-input {
+    width: 100%;
+    /* height: 36px; */
+    border: 1px solid #000;
+    margin-top: 10px;
+    box-sizing: border-box;
+    outline: none;
+    /* line-height: 36px; */
+    padding: 11px 10px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+#pc-leave-msg .select {
+    display: block;
+    padding: 10px;
+    /* background: #fff url(imgs/arrow-down.png) 93% center no-repeat; */
+    /* background-size: 12px 12px; */
+    border: 1px solid #000;
+    font-size: 14px;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: left;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#pc-leave-msg .bc-img {
+    display: inline-block;
+    height: 12px;
+    position: absolute;
+    right: 10px;
+}
+
+#pc-leave-msg .bc-img img {
+    height: 100%;
+    width:auto;
+}
+
+#pc-leave-msg .sub-btn {
+    display: inline-block;
+    width: 100%;
+    height: 36px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+#pc-leave-msg .select-area {
+   
+}
+
+#pc-leave-msg #province,
+#pc-leave-msg #city {
+    position: relative;
+    margin-top: 10px;
+}
+
+#pc-leave-msg #city {
+   
+}
+
+#pc-leave-msg #province span,
+#pc-leave-msg #city span {
+    color: #9d9d9d;
+}
+
+#pc-leave-msg .dropdown-menu li {
+    list-style: none;
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.428571429;
+    color: #333;
+    white-space: nowrap;
+}
+
+#pc-leave-msg .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 0;
+    -o-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    background-clip: padding-box;
+    width: 100%;
+    min-width: 120px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#pc-leave-msg .error-border {
+    border: 3px solid #f32836;
+}
+
+#pc-leave-msg .show {
+    display: block !important;
+}
+
+#pc-leave-msg .dropdown-menu li:hover {
+    background-color: #ccc;
+}
+
+#pc-leave-msg .black-font {
+    color: #333 !important;
+}
+
+#pc-leave-msg .placeholder {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+#pc-leave-msg .input-tip {
+
+}
+
+#pc-leave-msg ::-moz-placeholder {
+    color: #999;
+}
+
+#pc-leave-msg ::-webkit-input-placeholder {
+    color: #999;
+}
+
+#pc-leave-msg :-ms-input-placeholder {
+    color: #999;
+}
+
+#pc-leave-msg .input-box {
+    position: relative;
+}
+
+#pc-leave-msg #label-name,
+#pc-leave-msg #label-phone
+{
+    display: none;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    color: #999;
+    font-size: 13px;
+    position: absolute;
+    top: 13px;
+    left: 0;
+    padding-left: 11px;
+}
+/* app 弹框 */
+#caec-app-leave-msg{
+    position: fixed;
+    width:100%;
+    height:100%;
+    /* display: none; */
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-animation: all 0.5s;
+}
+#caec-app-leave-msg .module-layer{
+    height:100%;
+    background-color: rgba(0,0,0,0.35);
+}
+#caec-app-leave-msg .dialog-content{
+    width:75%;
+    position: absolute;
+    left:50%;
+    top:40%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    background-color:#fff;
+    padding:10px;
+    border-radius: 10px;
+}
+

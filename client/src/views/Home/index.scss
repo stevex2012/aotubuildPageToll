@@ -1,0 +1,11 @@
+@import "../../_settings";
+
+// css-modules处理
+:local {    
+}
+
+:global {    
+    .ant-collapse-borderless > .ant-collapse-item{
+        border: 0;
+    }
+}

@@ -1,0 +1,13 @@
+
+{
+    "jumpUrl":{
+        "value":"跳转链接"
+        
+    },
+    "phoneCall":{
+        "value":"拨打电话"
+    },
+    "leaveMsg":{
+        "value":"用户留资 "
+    }
+}

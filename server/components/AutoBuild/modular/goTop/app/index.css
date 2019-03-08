@@ -1,0 +1,37 @@
+.go-top{
+    position:fixed;
+    right:10px;
+    top:80%;
+    border:1px solid #eaeaea;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    width:50px;
+    height:50px;
+    background-color: #fff;
+}
+.go-top img{
+    width:100%
+}
+/* .go-top:before{
+    content: '';
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 16px solid #a79999;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -16px;
+    margin-top: -10px;
+}
+.go-top:after{
+    content: '';
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 16px solid #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -16px;
+    margin-top: -8px;
+} */

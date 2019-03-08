@@ -1,0 +1,54 @@
+@import "../../_settings";
+
+.ld_liner{ 
+    border-top: 1px dashed #3bff00;
+    &:after{
+        content: "";
+        position: absolute;
+        height: 2em;
+        width: 100%;
+        left: 0;
+        top: -1em;
+    }
+}
+
+.none{
+ display:none;
+  width:100%;  
+  position:absolute;
+  left:0;
+  z-index:10;
+  cursor: pointer;
+  position:fixed;
+  top:25px;
+  border-top: 1px dashed #3bff00;
+  &:after{
+      content: "";
+      position: absolute;
+      height: 2em;
+      width: 100%;
+      left: 0;
+      top: -1em;
+  }
+}
+
+.shown{
+    
+     width:100%;  
+     position:absolute;
+     left:0;
+     z-index:10;
+     cursor: pointer;
+     position:fixed;
+     top:25px;
+     border-top: 1px dashed #3bff00;
+     &:after{
+         content: "";
+         position: absolute;
+         height: 2em;
+         width: 100%;
+         left: 0;
+         top: -1em;
+     }
+   }
+

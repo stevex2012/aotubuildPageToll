@@ -1,0 +1,77 @@
+@import "./_settings";
+.App {
+    height: 100%;
+    text-align: center;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-title {
+    font-size: 1.5em;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+.router {
+    display: inline-block; //display:none;
+    li {
+        display: inline-block;
+        padding: 0 20px;
+        font-size: 18px;
+        a {
+            color: #999;
+        }
+       
+    }
+}
+.active-li-item{
+    color:#40a9ff !important;
+}
+
+
+// css-modules处理
+:local {}
+
+:global {
+    .ant-layout-header {
+        height: $header-H;
+        line-height: $header-H;
+        vertical-align: middle;
+    }
+    .ant-layout-footer {
+        height: $footer-H;
+        line-height: $footer-H;
+        padding-top: 0;
+        vertical-align: middle;
+    }
+    .ant-layout {
+        height: 100%;
+        background-color: inherit;
+    }
+    .ant-layout-content {
+        position: relative;
+        padding: 20px;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+        &:hover {
+            -webkit-box-shadow: inset 0 0 25px lighten($global-color-shadow, 15%);
+            box-shadow: inset 0 0 25px lighten($global-color-shadow, 15%);
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    .ant-collapse {}
+}

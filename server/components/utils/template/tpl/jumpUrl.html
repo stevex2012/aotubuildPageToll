@@ -1,0 +1,7 @@
+<%if(data.pageType == 'app'){%>
+    <!-- app跳转模板 -->
+    <div class="clickable btn" data-type="<%=data.dataType%>" data-url="<%=data.url%>" data-title="<%=data.dataTitle%>"></div>
+<%}else{%>
+    <!-- pc 跳转 模板 -->
+    <a href="<%=data.url%>" target="_blank" class="btn"></a>
+<%}%>

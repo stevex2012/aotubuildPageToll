@@ -1,0 +1,15 @@
+@import "../../_settings";
+//css modules处理
+:local {
+    .imgCoporation {
+        overflow-y: auto; //min-width: 900px;       
+        border: 1px dashed darken($global-color-primary, 30%);        
+        text-align: center;
+        &:empty {
+            border: none;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.LineShowStyle{
+    width:100%;  
+    position:absolute;
+    left:0;
+    z-index:10;
+    cursor: pointer;
+    position:fixed;
+    top:25px;
+    border-top: 1px dashed rgb(35, 150, 254);
+    &:after{
+        content: "";
+        position: absolute;
+        height: 2em;
+        width: 100%;
+        left: 0;
+        top: -1em;
+    }
+}
+.LineUnshowStyle{
+    display: none;
+    width:100%;  
+    position:absolute;
+    left:0;
+    z-index:10;
+    cursor: pointer;
+    position:fixed;
+    top:25px;
+    border-top: 1px dashed rgb(35, 150, 254);
+    &:after{
+        content: "";
+        position: absolute;
+        height: 2em;
+        width: 100%;
+        left: 0;
+        top: -1em;
+    }
+}
+.del_img{
+    width: 42px !important;
+    height: auto;
+    float: right;
+    margin-top: -6px;
+}

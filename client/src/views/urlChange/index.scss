@@ -1,0 +1,48 @@
+@import "../../_settings";
+.about {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .content {
+        flex: 1;
+        max-width: $global-W;
+        max-height: calc(100% - 100px);
+        margin: 0 auto;
+        border-radius: 50px;
+        background-color: #fff;
+        padding: 51px 80px 60px;
+        height: calc(100% - 100px);
+    }
+    .cont {
+        height: calc(100% - 120px);        
+    }
+    .desc{
+        font-size: 16px;
+        color: #999;
+        margin-left: 20px;
+    }
+    .title-input{
+        margin-top: 20px;
+    }
+    .sure-btn,
+    .copy-btn{
+        float: right;
+        margin-top: 20px;
+        display: block;
+    }
+    .show-created{
+        clear: both;
+        width: 100%;
+        margin-top: 80px;
+        word-wrap: break-word;
+        overflow: hidden;
+        font-size: 18px;
+    }
+    .hide-btn{
+        display: none;
+    }
+  
+}

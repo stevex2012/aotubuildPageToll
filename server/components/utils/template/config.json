@@ -1,0 +1,10 @@
+{
+    "app":{
+        "jumpUrl":"",
+        "phoneCall":""
+    },
+    "pc":{
+        "jumpUrl":"",
+        "phoneCall":""
+    }
+}

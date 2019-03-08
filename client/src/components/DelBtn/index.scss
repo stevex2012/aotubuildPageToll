@@ -1,0 +1,35 @@
+.right-up-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    font-size: 34px;
+    width: 42px;
+    height: 42px;
+    padding: 0px;
+    line-height: 38px;
+    background: rgba(255, 255, 255, 0.932);
+    border-radius: 50%;
+    color: #1f1f1f;
+    text-align: center;
+    cursor: pointer; // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     width: 70%;
+    //     height: 1px;
+    //     background: #000;
+    //     left: 50%;
+    //     top: 50%;
+    //     transform: translate(-50%, -50%);
+    // }
+    // &:after {
+    //     content: '';
+    //     position: absolute;
+    //     height: 70%;
+    //     width: 1px;
+    //     background: #000;
+    //     left: 50%;
+    //     top: 50%;
+    //     transform: translate(-50%, -50%);
+    // }
+}

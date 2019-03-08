@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas</title>
+    <style>
+        img{
+            display: block;
+        }
+        .img-source{
+            width:400px;
+            
+        }
+        .img-source img{
+            width:100%;
+        }
+
+    </style>
+</head>
+<body>
+    <input id="chooseImg"  type="file" accept="jpg/png">
+    <div class="img-source"></div>
+</body>
+<script>
+    // 得到 图片base64编码
+    // 使用canvas 切割图片
+    const chooseImg = document.querySelector( "#chooseImg" );
+    chooseImg.addEventListener('change',function(e){
+        console.log(e.target.files[0]);
+        let filerReader = new FileReader();
+        filerReader.readAsDataURL(e.target.files[0]);
+        filerReader.onloadend = function(e){
+            console.log( e.target.result );
+
+            splitImg({
+                base64: e.target.result
+            });
+        }
+        function splitImg(opt){// 596
+            const dragPointData = [
+                
+                {
+                    x:0,
+                    y:200,
+                },
+                {
+                    x:0,
+                    y:300,
+                },
+                {
+                    x:0,
+                    y:400,
+                },
+                {
+                    x:0,
+                    y:596,
+                }
+
+            ] 
+            let data = [];
+            var img = document.createElement( "img" );
+            
+            // let canvas = document.createElement( "canvas" );
+            // canvas.width = 400;
+            // canvas.height = 400;
+            
+            // canvas.style = "width:400px;height:400px;"
+            function createCanvas(){
+
+            }
+            //console.log(canvas);
+            img.src = opt.base64;
+            document.querySelector('.img-source').appendChild( img );
+            img.onload = function(){
+                //img.style = "width:400px";
+                //test();
+                run();
+            }
+            // 记录 前一次 y 轴 
+            let lastclientY = 0;
+            function test(){
+                let canvas = document.createElement( "canvas" );
+                canvas.width = 800;
+                canvas.height = 800;
+                canvas.style = "width:800px;height:800px;"
+                let ctx = canvas.getContext( "2d" );
+                ctx.drawImage( img, 0,0,img.naturalWidth,100,0,0,400,100 );
+                let dataBase64 = canvas.toDataURL("image/png");
+                document.body.appendChild( canvas );
+            }
+            function run(){
+                let i = 1,
+                    len = dragPointData.length;
+                for( let i = 0;i< len;i++){
+
+                }
+                dragPointData.forEach( function( point,idx ){
+                    let canvas = document.createElement( "canvas" );
+                    canvas.width = img.naturalWidth;
+                    //canvas.height = 400;
+                    //canvas.style = "width:400px;height:400px;"
+                    let ctx = canvas.getContext( "2d" );
+                    let splitY = parseInt(point.y - lastclientY,10);
+                   
+                    canvas.height = splitY;
+
+                    canvas.style = `width:${img.naturalWidth}px;height:${splitY}px`
+
+                    //0,50,400,100,0,0,400,100
+                    //ctx.drawImage( img, 0 , splitY, 0, splitY,0,0, 400, splitY );
+                    ctx.drawImage( img, 0 , lastclientY, img.naturalWidth, splitY,0,0,  img.naturalWidth, splitY );
+
+                    let dataBase64 = canvas.toDataURL("image/png");
+                    let showImg = document.createElement( "img" );
+                    showImg.src = dataBase64;
+                    document.body.appendChild( showImg );
+                    lastclientY = point.y;
+                    
+                } )
+            }
+        }
+        
+    },false);
+    // 
+    function splitImg( opt ){
+        let imgW = opt.width,
+            imgH = opt.height,
+            points = opt.data,
+            lastclientY = 0,
+            returnData = [];
+        try{
+            points.forEach( function( point,idx ){
+                let canvas = document.createElement( "canvas" );
+                canvas.width = imgW;
+
+                let ctx = canvas.getContext( "2d" );
+                let splitY = parseInt(point.y - lastclientY,10);
+
+                canvas.height = splitY;
+                canvas.style = `width:${imgW}px;height:${splitY}px`;
+
+                ctx.drawImage( img, 0 , lastclientY, imgW, splitY,0,0,  imgW, splitY );
+
+                let dataBase64 = canvas.toDataURL("image/png");
+                //let showImg = document.createElement( "img" );
+                returnData.push( dataBase64 );
+                //showImg.src = dataBase64;
+                //document.body.appendChild( showImg );
+                lastclientY = point.y;
+
+            } );
+        }catch(e){
+            throw new Error( e );
+        }
+        return returnData;
+    }
+</script>
+</html>

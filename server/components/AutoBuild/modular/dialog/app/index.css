@@ -1,0 +1,44 @@
+#caec-dialog-wrap{
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index: 6;
+    display: none;
+}
+#caec-dialog-wrap .modal_layer{
+    height:100%;
+    background-color: rgba(0,0,0,0.25);
+}
+#caec-dialog-wrap .dialog-main{
+    position: absolute;
+    width:75%;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+#caec-dialog-wrap .dialog-content{
+    min-height:40px;
+    line-height:36px;
+}
+#caec-dialog-wrap .dialog-header{
+    line-height: 36px;
+    background-color: #dedede;
+    border-radius: 10px 10px 0 0 ;
+}
+#caec-dialog-wrap .dialog-btn{
+    line-height:36px;
+}
+#caec-dialog-wrap .dialog-btn span{
+    padding:5px 30px;
+    background-color:orange;
+    border-radius: 6px; 
+}
+
+
+
