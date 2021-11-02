@@ -5,9 +5,8 @@ define([
 ], function (div, Dialog) {
 
     //接口 省市
-    var LOCATIONDATAUrl = 'https://mall.changan.com.cn/main/region/getAllAreaData';
-    /// 接口 留资
-    var LEAVEMSGURL = 'https://mall.changan.com.cn/agapp/agentOrder/reserved';
+    var LOCATIONDATAUrl;
+    var LEAVEMSGURL;
     function init(domId) {
         //var div = document.createElement('div');
         //div.innerHTML = domId;
@@ -231,7 +230,7 @@ define([
         //请求省市信息
         ajax({
             method: 'get',
-            url: "https://mall.changan.com.cn/main/region/getAllAreaData",
+            url: '',
             data: {},
             cache: true,
             sendBefore: function (xhr) {
@@ -407,7 +406,7 @@ define([
             var productName =  document.querySelector('title').innerHTML || '长安专题页';
             ajax({
                 method: 'post',
-                url: "https://mall.changan.com.cn/agapp/agentOrder/reserved",
+                url:'',
                 async: true,
                 data: {
                     cityId: postInfo.cityId,

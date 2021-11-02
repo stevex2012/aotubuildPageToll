@@ -26,7 +26,7 @@ class UrlChange extends Component{
         let urlInfo = this.state.setUrl;
         let rightUrl;
         let titleInfo = this.state.setTitle;
-        let stringUrl = "https://cloud.mall.changan.com.cn/caecapp/main/index.html#main/container-self.html?href=";
+        let stringUrl;
         if(!titleInfo || !urlInfo){
             this.setState({resultUrl:"*您还有信息没有输入，请检查！"});
             return;
@@ -35,7 +35,7 @@ class UrlChange extends Component{
        if(!urlInfo.includes("cloud")){
            let changeUrl = urlInfo.split("//"),str,
            replaceUrl = changeUrl[1].split('/');
-           replaceUrl[0] = "cloud.mall.changan.com.cn";
+           replaceUrl[0];
            rightUrl = "https://";
            replaceUrl.map((item,index)=>{
                if(index == replaceUrl.length-1){

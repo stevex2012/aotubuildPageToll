@@ -8,9 +8,8 @@ define([
 ], function (Tpl, Dialog) {
     'use strict';
     //接口 省市
-    var LOCATIONDATAUrl = 'https://mall.changan.com.cn/main/region/getAllAreaData';
-    /// 接口 留资
-    var LEAVEMSGURL = 'https://mall.changan.com.cn/agapp/agentOrder/reserved';   
+    var LOCATIONDATAUrl;
+    var LEAVEMSGURL;
     function init(domId) {
         document.body.innerHTML += Tpl;
         const dom = document.querySelector(`#${domId}`);
